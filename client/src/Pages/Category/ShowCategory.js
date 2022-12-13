@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import {List, ListItem, ListItemText, Divider} from '@material-ui/core';
+import formatDate from '../../utils/formatDate';
 
 function ShowCategories() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ function ShowCategories() {
         <List>
             {fora.map((forum, index) => (
                 <ListItem key={index} button onClick={() => navigate(`/forum/${forum._id}`)}>
-                    <ListItemText primary={forum.title} secondary={forum.createdAt} />
+                    <ListItemText primary={forum.title} secondary={formatDate(forum.createdAt)} />
                 </ListItem>
             ))}
         </List>

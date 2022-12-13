@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import {List, ListItem, ListItemText, Button, TextField} from '@material-ui/core';
 import AuthContext from '../../Contexts/AuthContext';
+import formatDate from '../../utils/formatDate';
 
 function ShowThread() {
   const navigate = useNavigate();
@@ -74,7 +75,7 @@ function ShowThread() {
         <List>
             {posts.map((post, index) => (
                 <ListItem key={index}>
-                    <ListItemText primary={post.content} secondary={post.createdAt} />
+                    <ListItemText primary={post.content} secondary={formatDate(post.createdAt)} />
                 </ListItem>
             ))}
         </List>

@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import Login from './Pages/Auth/Login';
 import Register from './Pages/Auth/Register';
 import Home from './Pages/Home';
+import AboutUs from './Pages/AboutUs';
 import CreateCategory from './Pages/Category/CreateCategory';
 import BrowseCategories from './Pages/Category/BrowseCategories';
 import ShowCategory from './Pages/Category/ShowCategory';
@@ -14,6 +15,8 @@ import CreateForum from './Pages/Forum/CreateForum';
 import ShowForum from './Pages/Forum/ShowForum';
 import CreateThread from './Pages/Thread/CreateThread';
 import ShowThread from './Pages/Thread/ShowThread';
+import UpcomingFeatures from './Pages/UpcomingFeatures';
+import ContactUs from './Pages/ContactUs';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -44,6 +47,9 @@ function App() {
             <Navbar />
             <Routes>
               <Route exact path='/' element={<Home />} />            
+              <Route exact path='/about-us' element={<AboutUs />} />            
+              <Route exact path='/upcoming-features' element={<UpcomingFeatures />} />            
+              <Route exact path='/contact-us' element={<ContactUs />} />            
               <Route exact path='/auth/login' element={!user ? <Login /> : <Navigate to='/' /> } />
               <Route exact path='/auth/register' element={!user ? <Register /> : <Navigate to='/' /> } />
               <Route exact path='/category/create' element={user ? <CreateCategory /> : <Navigate to='/auth/login' /> } />

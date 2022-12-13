@@ -1,4 +1,5 @@
 import { Button } from '@material-ui/core';
+import formatDate from '../../utils/formatDate'
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -30,7 +31,7 @@ function BrowseCategories() {
         <List>
             {categories.map((category, index) => (
                 <ListItem key={index} button onClick={() => navigate(`/category/${category._id}`)}>
-                    <ListItemText primary={category.title} secondary={category.createdAt} />
+                    <ListItemText primary={category.title} secondary={formatDate(category.createdAt)} />
                 </ListItem>
             ))}
         </List>

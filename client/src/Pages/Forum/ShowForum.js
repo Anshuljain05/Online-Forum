@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import {List, ListItem, ListItemText, Divider} from '@material-ui/core';
+import formatDate from '../../utils/formatDate';
 
 function ShowForum() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ function ShowForum() {
         <List>
             {threads.map((thread, index) => (
                 <ListItem key={index} button onClick={() => navigate(`/thread/${thread._id}`)}>
-                    <ListItemText primary={thread.title} secondary={thread.createdAt} />
+                    <ListItemText primary={thread.title} secondary={formatDate(thread.createdAt)} />
                 </ListItem>
             ))}
         </List>

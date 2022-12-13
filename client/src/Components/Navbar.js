@@ -55,7 +55,7 @@ export default function MenuAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Typography style={{cursor: 'pointer'}} variant="h6" className={classes.title} onClick={() => navigate('/')}>
             Online Forum
           </Typography>
           <Button color='inherit' onClick={() => navigate('/category')}>
