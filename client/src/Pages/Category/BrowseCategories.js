@@ -1,9 +1,9 @@
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import formatDate from '../../utils/formatDate'
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {List, ListItem, ListItemText, Divider} from '@material-ui/core';
+import {List, ListItem, ListItemText, Divider} from '@mui/material';
 
 function BrowseCategories() {
   const navigate = useNavigate();

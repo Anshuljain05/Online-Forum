@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import {List, ListItem, ListItemText, Button, TextField} from '@material-ui/core';
+import {List, ListItem, ListItemText, Button, TextField} from '@mui/material';
 import AuthContext from '../../Contexts/AuthContext';
 import formatDate from '../../utils/formatDate';
 

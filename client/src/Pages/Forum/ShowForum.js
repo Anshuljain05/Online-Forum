@@ -1,8 +1,8 @@
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import {List, ListItem, ListItemText, Divider} from '@material-ui/core';
+import {List, ListItem, ListItemText, Divider} from '@mui/material';
 import formatDate from '../../utils/formatDate';
 
 function ShowForum() {
