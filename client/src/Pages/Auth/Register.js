@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import validator from 'validator';
 import axios from 'axios';
 import { createTheme } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme();
 
@@ -34,6 +35,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function Register() {
+  const navigate = useNavigate();
   const classes = useStyles();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -65,6 +67,7 @@ export default function Register() {
     }
     try {
         await axios.post('/api/auth/register', data);
+        navigate('/auth/login')
     } catch (error) {
         const message = error.response.data.message;
         if (message === 'email_exists') {

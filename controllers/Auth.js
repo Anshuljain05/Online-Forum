@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require('../models/User');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const Profile = require("../models/Profile");
 
 router.get('/init', async (req, res) => {
     let response = null;
@@ -36,6 +37,15 @@ router.post('/register', async (req, res) => {
     });
 
     await newUser.save();
+    
+    const newProfile = Profile({
+        firstName: req.body.name,
+        email: req.body.email,
+        userId: newUser._id,
+        createdAt: Date.now()
+    });
+
+    await newProfile.save();
     res.sendStatus(201);
 });
 

@@ -17,6 +17,7 @@ import CreateThread from './Pages/Thread/CreateThread';
 import ShowThread from './Pages/Thread/ShowThread';
 import UpcomingFeatures from './Pages/UpcomingFeatures';
 import ContactUs from './Pages/ContactUs';
+import Profile from './Pages/Auth/Profile';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -52,6 +53,7 @@ function App() {
               <Route exact path='/contact-us' element={<ContactUs />} />            
               <Route exact path='/auth/login' element={!user ? <Login /> : <Navigate to='/' /> } />
               <Route exact path='/auth/register' element={!user ? <Register /> : <Navigate to='/' /> } />
+              <Route exact path='/profile' element={user ? <Profile /> : <Navigate to='/auth/login' /> } />
               <Route exact path='/category/create' element={user ? <CreateCategory /> : <Navigate to='/auth/login' /> } />
               <Route exact path='/category/:id' element={<ShowCategory />} />
               <Route exact path='/category' element={<BrowseCategories />} />

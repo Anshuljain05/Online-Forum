@@ -44,6 +44,11 @@ export default function MenuAppBar() {
     setAnchorEl(null);
   };
 
+  const handleProfile = () => {
+    handleClose();
+    navigate('/profile');
+  };
+
   const handleLogin = () => {
     handleClose();
     navigate('/auth/login');
@@ -75,17 +80,10 @@ export default function MenuAppBar() {
                     </Button>
                     <Menu
                       anchorEl={anchorEl}
-                      anchorOrigin={{
-                        vertical: 'top',
-                        horizontal: 'right',
-                      }}
-                      transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'right',
-                      }}
                       open={open}
                       onClose={handleClose}
                     >
+                      <MenuItem onClick={handleProfile}>Profile</MenuItem>
                       <MenuItem onClick={logout}>Logout</MenuItem>
                     </Menu>
                 </div>
