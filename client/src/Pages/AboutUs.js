@@ -50,10 +50,10 @@ export default function AboutUs() {
               About Us
             </Typography>
             <Typography variant="h5" align="justify" color="textSecondary" paragraph>
-                Every age it has passed through has been based on beliefs and new technologies, responding to the needs of individuals anxious to adjust to new forms of socialization. A time of great change is a period in which society looks for meaning. Information is already a tool, the principal tool that people use to perceive and understand their environment.
+            Our mission is to cultivate a thriving digital hub tailored for college and university students, where they can confidently seek and receive authoritative information and solutions to their academic challenges. By facilitating direct interaction with esteemed faculty members from their own institutions, we aspire to illuminate pathways to knowledge and foster a vibrant community of intellectual curiosity and scholarly excellence.
             </Typography>
             <Typography variant="h5" align="justify" color="textSecondary" paragraph>
-                Social media is a form of electronic communication that facilitates interaction based on certain interests and characteristics. Social media are media for social interaction, using highly accessible and scalable publishing techniques. Social media use web-based technologies to transform and broadcast media monologues into social dialogues.
+            Our platform elegantly bridges the gap between students and teachers, harnessing the wealth of knowledge and experience from educators to address student queries. Not only does it empower students with access to expert guidance, it also offers teachers a rewarding way to utilize their spare time, fostering a dynamic, supportive learning community.
             </Typography>
           </Container>
         </div>

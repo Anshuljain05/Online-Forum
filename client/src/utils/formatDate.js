@@ -1,4 +1,5 @@
 export default function formatDate(newDate) {
+  console.log(newDate)
     const months = {
       1: 'January',
       2: 'February',
@@ -15,7 +16,7 @@ export default function formatDate(newDate) {
     }
     const d = newDate
     const year = d.slice(0, 4)
-    const monthNumber = d.slice(5,7)
+    const monthNumber = Number(d.slice(5,7))
     const date = d.slice(8,10)
     const monthName = months[monthNumber]
     const time = d.slice(11,19)
